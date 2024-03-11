@@ -53,7 +53,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           local-dir: docs/.vuepress/dist/
-          server-dir: /var/ftp/all_ftp/www/
+          server-dir: ./www/
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
