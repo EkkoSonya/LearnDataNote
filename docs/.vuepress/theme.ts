@@ -4,13 +4,13 @@ import sidebar from "./sidebar";
 
 export default hopeTheme({
   // 主题选项：https://theme-hope.vuejs.press/zh/config/theme/layout.html
-  hostname: "https://newzone.top",
+  hostname: "http://ekkosonya.cn",
 
   iconAssets: "iconfont",
 
   author: {
-    name: "LearnData",
-    url: "https://newzone.top",
+    name: "EkkoSonya",
+    url: "http://ekkosonya.cn",
   },
 
   logo: "/logo.svg",
@@ -29,7 +29,7 @@ export default hopeTheme({
   fullscreen: true,
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
-  repo: "rockbenben/LearnData",
+  repo: "EkkoSonya",
   // 自定义仓库链接文字。默认从 `repo` 中自动推断为 "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
   repoLabel: "GitHub",
   // 是否在导航栏内显示仓库链接，默认为 `true`
@@ -54,10 +54,10 @@ export default hopeTheme({
   // sidebarSorter: ['readme', 'order', 'title'],
 
   // copyright 默认为 Copyright © <作者>
-  copyright: `Copyright © 2023-present <a href="https://newzone.top/" target="_blank" rel="noopener noreferrer">LearnData 开源笔记</a>`,
+  copyright: `Copyright © 2024-present <a href="http://ekkosonya.cn/" target="_blank" rel="noopener noreferrer">EkkoSonya's Notes</a>`,
   displayFooter: true,
   // 页脚，支持使用 HTMLString 以显示备案信息等
-  // footer: `MIT Licensed`,
+  footer: `<img src="/beian.png"> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33019202000049" rel="noopener noreferrer" target="_blank">浙公网安备33019202000049</a>`,
 
   // 页面布局 Frontmatter 配置：https://theme-hope.vuejs.press/zh/config/frontmatter/layout.html#pageinfo
   pageInfo: ["Category", "Tag", "Word", "ReadingTime", "PageView"],
@@ -65,7 +65,7 @@ export default hopeTheme({
   // 主题功能选项：https://theme-hope.vuejs.press/zh/config/theme/feature.html
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
-    name: "清顺",
+    name: "EkkoSonya",
     avatar: "/avatar_self.webp",
     description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
     intro: "/intro.html",
