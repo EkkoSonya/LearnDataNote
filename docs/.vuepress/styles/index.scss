@@ -10,6 +10,10 @@
   top: calc(var(--navbar-height) + 5rem);
 }
 
+.vp-footer {
+  display: flex;
+}
+
 #toc {
   // 增加 toc 与内容区的距离
   // left: calc(100% + 2rem);
