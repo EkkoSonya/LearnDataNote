@@ -3,7 +3,7 @@
 home: true
 layout: BlogHome
 icon: home
-title: 互联网小白
+# title: 互联网小白
 #heroImage: /logo.svg
 # heroText: 互联网小白
 tagline: 好好学习，天天向上
