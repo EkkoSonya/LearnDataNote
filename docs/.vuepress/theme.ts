@@ -1,4 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -87,6 +88,29 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    mdEnhance: {
+      sub: true, // 上下角标
+      sup: true,
+      katex: true,
+      // mathjax: true,
+      tasklist: true, // 任务列表
+      figure: true, // 启用 figure
+      imgLazyload: true, // 启用图片懒加载
+      // imgMark: true, // 启用图片标记
+      imgSize: true, // 启用图片大小
+      include: true, //导入文件
+      component: true, // 使用 component 代码块来在 Markdown 中添加组件
+      footnote: true,
+      // tabs: true, // 选项卡
+      alert: true, // GFM 警告
+      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
+      hint: true, // 提示容器
+      mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
+      align: true, // 启用自定义对齐
+      // codetabs: true, // 代码块分组
+      // demo: true, //代码演示
+    },
+
     // 评论配置（仅做样例，记得更换）
     comment: {
       /*
@@ -138,26 +162,7 @@ export default hopeTheme({
 
     // 禁用不需要的配置
     // https://plugin-md-enhance.vuejs.press/zh/guide/
-    mdEnhance: {
-      sub: true, // 上下角标
-      sup: true,
-      tasklist: true, // 任务列表
-      figure: true, // 启用 figure
-      imgLazyload: true, // 启用图片懒加载
-      // imgMark: true, // 启用图片标记
-      imgSize: true, // 启用图片大小
-      include: true, //导入文件
-      component: true, // 使用 component 代码块来在 Markdown 中添加组件
-      footnote: true,
-      // tabs: true, // 选项卡
-      alert: true, // GFM 警告
-      attrs: true, // 使用特殊标记为 Markdown 元素添加属性
-      hint: true, // 提示容器
-      mark: true, // 使用 == == 进行标记。请注意两边需要有空格。
-      align: true, // 启用自定义对齐
-      // codetabs: true, // 代码块分组
-      // demo: true, //代码演示
-    },
+
 
     // Algolia 全文搜索：需要自己设置爬虫并生成下方配置，如不会自己设置，启用下方本地搜索
     /* docsearch: {

@@ -1,7 +1,9 @@
 import { webpackBundler } from "@vuepress/bundler-webpack";
 import { defineUserConfig } from "vuepress";
-import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+// import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+// import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import theme from "./theme.js";
+
 
 export default defineUserConfig({
   // 网站语言，默认为中文
@@ -26,11 +28,12 @@ export default defineUserConfig({
   pagePatterns: ["**/*.md", "!_temp", "!reading", "!.vuepress", "!node_modules"],
 
   plugins: [
+    // mdEnhancePlugin(theme.plugins)
     // 谷歌分析
-    googleAnalyticsPlugin({
-      // 设置你的 Analytics ID
-      id: "G-RWKZTY2P9R",
-    }),
+    // googleAnalyticsPlugin({
+    //   // 设置你的 Analytics ID
+    //   id: "G-RWKZTY2P9R",
+    // }),
   ],
   bundler: webpackBundler({
     postcss: {},
