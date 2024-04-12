@@ -28,7 +28,6 @@
     "cpx2": "^7.0.1",
     "markdownlint-cli": "^0.39.0",
     "mathjax-full": "^3.2.2",
-    "markdown-it-katex": "^2.0.3",
     "prettier": "^3.2.5",
     "sass-loader": "^14.1.1",
     "vidstack": "^1.10.9"

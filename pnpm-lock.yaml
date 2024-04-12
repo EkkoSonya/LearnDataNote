@@ -52,9 +52,6 @@ devDependencies:
   vidstack:
     specifier: ^1.10.9
     version: 1.10.9
-  markdown-it-katex:
-    specifier: ^2.0.3
-    version: 2.0.3
 
 packages:
 
