@@ -1,6 +1,7 @@
 import { webpackBundler } from "@vuepress/bundler-webpack";
 import { defineUserConfig } from "vuepress";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import markdownItKatex from "markdown-it-katex"
 
 import theme from "./theme.js";
 
@@ -25,6 +26,12 @@ export default defineUserConfig({
 
   // 禁止文件夹生成静态文件，参考 [VuePress 文档]（https://v2.vuepress.vuejs.org/zh/guide/page.html#routing）
   pagePatterns: ["**/*.md", "!_temp", "!reading", "!.vuepress", "!node_modules"],
+
+  markdown: {
+    config: (md) => {
+      md.use(markdownItKatex)
+    }
+  },
 
   plugins: [
     // 谷歌分析
