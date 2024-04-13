@@ -9,7 +9,7 @@ export default defineUserConfig({
   // 网站语言，默认为中文
   lang: "zh-CN",
   // 网站标题
-  title: "EkkoSonya's Notes",
+  title: "EkkoSonya's Blog",
   // 网站描述
   description: "笔记记录",
 

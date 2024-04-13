@@ -1,5 +1,4 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import navbar from "./navbar";
 import sidebar from "./sidebar";
 
@@ -14,7 +13,7 @@ export default hopeTheme({
     url: "http://ekkosonya.cn",
   },
 
-  logo: "/logo.svg",
+  logo: "/penguin1.png",
 
   // 是否全局启用路径导航
   breadcrumb: false,
@@ -55,7 +54,7 @@ export default hopeTheme({
   // sidebarSorter: ['readme', 'order', 'title'],
 
   // copyright 默认为 Copyright © <作者>
-  copyright: `Copyright © 2024-present <a href="http://ekkosonya.cn/" target="_blank" rel="noopener noreferrer">EkkoSonya's Notes</a>`,
+  copyright: `Copyright © 2024-present <a href="http://ekkosonya.cn/" target="_blank" rel="noopener noreferrer">EkkoSonya's Blog</a>`,
   displayFooter: true,
   // 页脚，支持使用 HTMLString 以显示备案信息等
   footer: `<img src="/beian.png" style="width:1.2rem;margin-right:2px;"> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=33019202000049" rel="noopener noreferrer" target="_blank">浙公网安备33019202000049</a>`,
@@ -67,18 +66,13 @@ export default hopeTheme({
   blog: {
     articleInfo: ["Date", "PageView", "Category", "Tag", "ReadingTime"],
     name: "EkkoSonya",
-    avatar: "/img/penguin.jpeg",
+    avatar: "/penguin2.png",
     description: "好好学习，天天向上",
     // intro: "/intro.html",
     roundAvatar: true,
     medias: {
       GitHub: "https://github.com/EkkoSonya",
-      // Zhihu: "https://www.zhihu.com/people/qingwhat",
-      // 少数派: ["https://sspai.com/u/zqj05i4v/posts", "./docs/.vuepress/icons/sspai.svg"],
-      // Wechat: "https://img.newzone.top/wechat.svg",
       Email: "mailto:ekkosonya@163.com",
-      // Discord: "https://discord.gg/PZTQfJ4GjX",
-      // RSS: "/rss.xml",
     },
   },
 
