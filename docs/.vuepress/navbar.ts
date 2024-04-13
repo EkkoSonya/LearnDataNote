@@ -5,13 +5,12 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   { 
     text: "主页",
-    prefix: "/posts/",
     link: "",
   },
   { 
     text: "学术",
     prefix: "/academic/",
-    link: "/code/",
+    link: "/academic/",
   },
   { 
     text: "代码",

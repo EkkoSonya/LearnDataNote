@@ -23,14 +23,7 @@ export default sidebar({
       prefix: "/daily/",
       collapsible: true,
       children: "structure",
-    },
-    {
-      text: "博客",
-      prefix: "/posts/",
-      link: "",
-      collapsible: true,
-      children: "structure",
-    },
+    }
   ],
   // 专题区
   // "/apps/topic/": "structure",
