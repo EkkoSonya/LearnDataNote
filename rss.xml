@@ -6,20 +6,44 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 13 Apr 2024 07:32:15 GMT</pubDate>
-    <lastBuildDate>Sat, 13 Apr 2024 07:32:15 GMT</lastBuildDate>
+    <pubDate>Sat, 13 Apr 2024 11:14:14 GMT</pubDate>
+    <lastBuildDate>Sat, 13 Apr 2024 11:14:14 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>随想</category>
+    <category>daily</category>
+    <category>academic</category>
+    <category>code</category>
     <item>
-      <title>Royal never give up</title>
-      <link>http://ekkosonya.cn/posts/2024-03-01-blog_example.html</link>
-      <guid>http://ekkosonya.cn/posts/2024-03-01-blog_example.html</guid>
-      <source url="http://ekkosonya.cn/rss.xml">Royal never give up</source>
-      <description>Royal never die </description>
-      <category>随想</category>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Royal never die</p>
+      <title>daily1</title>
+      <link>http://ekkosonya.cn/daily/d1.html</link>
+      <guid>http://ekkosonya.cn/daily/d1.html</guid>
+      <source url="http://ekkosonya.cn/rss.xml">daily1</source>
+      <description>a+b=c </description>
+      <category>daily</category>
+      <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a+b=c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>uav1</title>
+      <link>http://ekkosonya.cn/academic/UAV/UAV1.html</link>
+      <guid>http://ekkosonya.cn/academic/UAV/UAV1.html</guid>
+      <source url="http://ekkosonya.cn/rss.xml">uav1</source>
+      <description>a=cb​ </description>
+      <category>academic</category>
+      <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><mi>b</mi><mi>c</mi></mfrac></mrow><annotation encoding="application/x-tex">a=\frac{b}{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2251em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Java1</title>
+      <link>http://ekkosonya.cn/code/java/JAVA1.html</link>
+      <guid>http://ekkosonya.cn/code/java/JAVA1.html</guid>
+      <source url="http://ekkosonya.cn/rss.xml">Java1</source>
+      <description>a+b=c </description>
+      <category>code</category>
+      <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a+b=c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></p>
 ]]></content:encoded>
     </item>
   </channel>
