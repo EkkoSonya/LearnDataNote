@@ -6,8 +6,8 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 14 Apr 2024 19:42:51 GMT</pubDate>
-    <lastBuildDate>Sun, 14 Apr 2024 19:42:51 GMT</lastBuildDate>
+    <pubDate>Sun, 14 Apr 2024 19:44:08 GMT</pubDate>
+    <lastBuildDate>Sun, 14 Apr 2024 19:44:08 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>academic</category>
@@ -44,7 +44,7 @@
 </ul>
 <h2>主要内容</h2>
 <h3>系统结构</h3>
-<p>####基本设置</p>
+<h4>基本设置</h4>
 <ul>
 <li>
 <p>考虑无人机辅助无线网络的下行链路传输(down-link transmission)，即无人机作为空中基站。</p>
