@@ -94,6 +94,7 @@ order: -0.5
   $$
   M(t)=\frac{ln(\frac{\frac{S(t)}{(\mu_{LoS}-\mu_{NLoS})}-\frac{\mu{NLoS}}{\mu_{LoS}-\mu_{NLoS}}}{b_1}}{b_2}
   \\
+  \\
   S(t)=\frac{P_max}{\gamma K_0\sigma^2{d_{k_n}}^{\alpha}(t)}
   $$
   $Proposition\ 1$展示了无人机为相关用户提供可靠服务所需的**高度**的必要条件。  
@@ -138,13 +139,18 @@ $$
 \begin{array}{l}
 \underset{C,Q,H}{\max} MOS_{total}=\sum_{n=1}^N\sum_{k_n=1}^{K_n}\sum_{t=0}^{T_s}MOS_{k_n}(t)
 \\
+\\
 s.t.\quad K_n\cap K_{n^{'}}=\phi ,n^{'}\neq n, \forall n,
+\\
 \\
 h_{min}\leq h_n(t)\leq h_{max},\forall t, \forall n,
 \\
+\\
 \Gamma_{k_n(t)}\geq \gamma_{k_n}, \forall t, \forall k_n,
 \\
+\\
 \sum_{k_n=1}^{K_n}p_{k_n}(t)\leq P_{max}, \forall t, \forall k_n,
+\\
 \\
 p_{k_n(t)}\geq 0, \forall k_n, \forall t,
 \end{array}
@@ -168,13 +174,18 @@ $$
 \begin{array}{l}
 \underset{C,Q,H}{\max} MOS_{total}=\sum_{n=1}^N\sum_{k_n=1}^{K_n}MOS_{k_n}(t)
 \\
+\\
 s.t.\quad K_n\cap K_{n^{'}}=\phi ,n^{'}\neq n, \forall n,
+\\
 \\
 h_{min}\leq h_n(t)\leq h_{max},\forall t, \forall n,
 \\
+\\
 \Gamma_{k_n(t)}\geq \gamma_{k_n}, \forall t, \forall k_n,
 \\
+\\
 \sum_{k_n=1}^{K_n}p_{k_n}(t)\leq P_{max}, \forall t, \forall k_n,
+\\
 \\
 p_{k_n(t)}\geq 0, \forall k_n, \forall t,
 \end{array}
