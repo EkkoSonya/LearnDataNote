@@ -102,5 +102,84 @@ order: -0.5
 
 #### Quality-of-Experience Model
 
+由于不同用户对于传输速率的需求是不同的，所以在无人机辅助通信网络中我们需要考虑QoE模型。
 
+在该文中，采用MOS作为用户QoS衡量的标准，具体如下:
+$$
+MOS_{k_n}(t)=\zeta_1{MOS_{k_n}}^{delay}(t)+\zeta_2{MOS_{k_n}}^{rate}(t)
+$$
+其中，$\zeta_1,\zeta_2$是系数，且$\zeta_1+\zeta_2=1$。
+
+- 根据MOS数值，共划分5个等级: excellent(4.5)  very good(2~3.5)  fair(1~2)  poor(1)。
+
+- 在该文中考虑的是网页浏览应用传输情况，因此${MOS_{k_n}}^{delay}(t)$可以忽略，因此，此时的MOS模型定义如下:
+  $$
+  MOS_{k_n}(t)=-C_1ln[d(r_{k_n}(t))]+C_2
+  $$
+  $d(r_{k_n}(t))$是与传输速率有关的延迟时间，$MOS_{k_n}(t)$为t时刻的MOS评分，取值范围从$1-4.5$。$C_1$和$C_2$是通过分析web浏览应用程序的实验结果确定的常数，分别设为1.120和4.6746。
+  $$
+  d(r_{k_n}(t))=3RTT+\frac{FS}{r_{k_n}(t)}+L(\frac{MSS}{r_{k_n}})+RTT-\frac{2MSS(2^L-1)}{r_{k_n}(t)}
+  $$
+  其中，RTT[s]表示round trip time(数据包从发送端-接收端-发送端的时间)，FS[bit]是网页大小，MSS[bit]是最大报文长度，$L=min[L_1,L_2]$表示 the number of slow start cycles with idle periods。  
+
+  $L_1=log_2(\frac{r_{k_n}RTT}{MSS}+1)-1,\quad L_2=log_2(\frac{FS}{2MSS}+1)-1$.
+
+- 用户$r_{k_n}$在一段时间$T_s$内的MOS总和为: 
+  $$
+  MOS_{r_{k_n}}=\sum_{t=0}^{T_s}MOS_{k_n}(t)
+  $$
+
+### 优化问题建立
+
+假设功率$Q={q_n(t),0\leq t\leq T_s}$, 高度$H={h_n(t),0\leq t\leq T_s}$
+
+本文目的是优化无人机在每个时隙的位置，从而最大化所有用户的总MOS值。具体表述如下:
+$$
+\begin{array}{l}
+\underset{C,Q,H}{\max} MOS_{total}=\sum_{n=1}^N\sum_{k_n=1}^{K_n}\sum_{t=0}^{T_s}MOS_{k_n}(t)
+\\
+s.t.\quad K_n\cap K_{n^{'}}=\phi ,n^{'}\neq n, \forall n,
+\\
+h_{min}\leq h_n(t)\leq h_{max},\forall t, \forall n,
+\\
+\Gamma_{k_n(t)}\geq \gamma_{k_n}, \forall t, \forall k_n,
+\\
+\sum_{k_n=1}^{K_n}p_{k_n}(t)\leq P_{max}, \forall t, \forall k_n,
+\\
+p_{k_n(t)}\geq 0, \forall k_n, \forall t,
+\end{array}
+$$
+
+- 该优化问题是一个non-convex问题，因为目标函数对于无人机的3D坐标是非凸的。
+- 总用户的MOS取决于无人机的发射功率、数量和位置(水平位置和高度)。
+
+### 解决方案
+
+#### 无人机的3D部署
+
+考虑以下场景，将上述优化问题简化:
+
+无人机$n$以可变高度悬停在用户上方，用户是保持**静态**的。  
+每架无人机的带宽和发射功率都均匀分配给每个用户。  
+因此我们将**优化问题**简化为**区域分割问题**。
+
+描述如下: 但即使仅考虑用户聚类，该问题依然是NP-hard问题
+$$
+\begin{array}{l}
+\underset{C,Q,H}{\max} MOS_{total}=\sum_{n=1}^N\sum_{k_n=1}^{K_n}MOS_{k_n}(t)
+\\
+s.t.\quad K_n\cap K_{n^{'}}=\phi ,n^{'}\neq n, \forall n,
+\\
+h_{min}\leq h_n(t)\leq h_{max},\forall t, \forall n,
+\\
+\Gamma_{k_n(t)}\geq \gamma_{k_n}, \forall t, \forall k_n,
+\\
+\sum_{k_n=1}^{K_n}p_{k_n}(t)\leq P_{max}, \forall t, \forall k_n,
+\\
+p_{k_n(t)}\geq 0, \forall k_n, \forall t,
+\end{array}
+$$
+
+
+#### 无人机的动态移动设计
 
