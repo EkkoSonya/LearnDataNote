@@ -10,5 +10,5 @@ tag:
 order: -0.5
 ---
 
-$a+b=c$
+$a+b=cc$
 
