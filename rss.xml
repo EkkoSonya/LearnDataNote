@@ -6,8 +6,8 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 05 May 2024 18:30:08 GMT</pubDate>
-    <lastBuildDate>Sun, 05 May 2024 18:30:08 GMT</lastBuildDate>
+    <pubDate>Wed, 31 Jul 2024 14:42:44 GMT</pubDate>
+    <lastBuildDate>Wed, 31 Jul 2024 14:42:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>academic</category>
@@ -319,10 +319,10 @@ x_t=
       <link>http://ekkosonya.cn/code/java/JAVA1.html</link>
       <guid>http://ekkosonya.cn/code/java/JAVA1.html</guid>
       <source url="http://ekkosonya.cn/rss.xml">Java1</source>
-      <description>a+b=c </description>
+      <description>a+b=cc </description>
       <category>code</category>
       <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a+b=c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></p>
+      <content:encoded><![CDATA[<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">a+b=cc</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">cc</span></span></span></span></p>
 ]]></content:encoded>
     </item>
   </channel>
