@@ -1,5 +1,5 @@
 ---
-title: RL-基本概念
+title: RL1-基本概念
 date: 2024-08-07
 category:
   - academic
