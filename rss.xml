@@ -6,18 +6,34 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 06 Aug 2024 17:08:21 GMT</pubDate>
-    <lastBuildDate>Tue, 06 Aug 2024 17:08:21 GMT</lastBuildDate>
+    <pubDate>Tue, 06 Aug 2024 17:17:39 GMT</pubDate>
+    <lastBuildDate>Tue, 06 Aug 2024 17:17:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>academic</category>
     <category>daily</category>
     <category>code</category>
     <item>
-      <title>RL-基本概念</title>
+      <title>RL2-贝尔曼公式</title>
+      <link>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%202.html</link>
+      <guid>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%202.html</guid>
+      <source url="http://ekkosonya.cn/rss.xml">RL2-贝尔曼公式</source>
+      <description>核心内容 state value the Bellman equation 1.State value </description>
+      <category>academic</category>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h3>核心内容</h3>
+<ul>
+<li>state value</li>
+<li>the Bellman equation</li>
+</ul>
+<h3>1.State value</h3>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>RL1-基本概念</title>
       <link>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%201.html</link>
       <guid>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%201.html</guid>
-      <source url="http://ekkosonya.cn/rss.xml">RL-基本概念</source>
+      <source url="http://ekkosonya.cn/rss.xml">RL1-基本概念</source>
       <description>1. 基本概念 State(状态)：The status of the agent with respect to the environment. State Space(状态空间): 所有状态的集合。S={si​}i=1n​。 Action(动作): 对于每一个状态，都有可选择的动作。 Action space of a state: 对应状态中所...</description>
       <category>academic</category>
       <pubDate>Wed, 07 Aug 2024 00:00:00 GMT</pubDate>
