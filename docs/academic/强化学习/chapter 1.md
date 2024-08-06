@@ -24,7 +24,7 @@ order: -0.5
 
 **Trajectory**：a state-action-reward chain.(可以有限，也可以是无限长的trajectory)
 $s_1\overset{a_2}{\underset{r=0}{\rightarrow}}s_2\overset{a_2}{\underset{r=0}{\rightarrow}}s_5\overset{a_2}{\underset{r=0}{\rightarrow}}s_8\overset{a_2}{\underset{r=1}{\rightarrow}}s_9$.
-**Return of a trajectory**：将对应的轨迹所获得的所有reward的总和。
+**Return of a trajectory**：将对应的轨迹所获得的所有reward的总和，可以粗步衡量一个策略的好坏。
 **Discounted return(of a trajectory)**：为了应对具有无限步的trajectory的$return=\infty$的情况。
 $s_1\overset{a_2}{\underset{r=0}{\rightarrow}}s_2\overset{a_2}{\underset{r=0}{\rightarrow}}s_5\overset{a_2}{\underset{r=0}{\rightarrow}}s_8\overset{a_2}{\underset{r=1}{\rightarrow}}s_9\color{blue}{\overset{a_2}{\underset{r=1}{\rightarrow}}s_9\overset{a_2}{\underset{r=1}{\rightarrow}}s_9\dots}$. 此时该trajectory的$return=0+0+0+1+1+\dots=\infty$。
 引入**discount rate**, $\gamma\in[0,1)$.
@@ -35,7 +35,7 @@ $s_1\overset{a_2}{\underset{r=0}{\rightarrow}}s_2\overset{a_2}{\underset{r=0}{\r
 即表示具有终止状态**terminal states**的trajectory，通常是具有有限步长的trajectory.
 同理，这样的任务称为**episodic tasks**。
 **continuing tasks**：即不具备terminal states的任务，会与环境一直交互下去。
-可以通过设置将episodic tasks转换成continuing tasks.
+可以通过设置将episodic tasks转换成continuing tasks，如可以在target states中限制action space，控制其一直待在target states中。
 Deterministic — Stochastic
 
 ### 2.Markov decision process(MDP)
