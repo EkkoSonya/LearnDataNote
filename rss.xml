@@ -6,8 +6,8 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 06 Aug 2024 17:21:12 GMT</pubDate>
-    <lastBuildDate>Tue, 06 Aug 2024 17:21:12 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Aug 2024 03:13:32 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Aug 2024 03:13:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>academic</category>
@@ -34,10 +34,12 @@
       <link>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%201.html</link>
       <guid>http://ekkosonya.cn/academic/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/chapter%201.html</guid>
       <source url="http://ekkosonya.cn/rss.xml">RL1-基本概念</source>
-      <description>1. 基本概念 State(状态)：The status of the agent with respect to the environment. State Space(状态空间): 所有状态的集合。S={si​}i=1n​。 Action(动作): 对于每一个状态，都有可选择的动作。 Action space of a state: 对应状态中所...</description>
+      <description>强化学习框架图 主要框架主要框架 1. 基本概念 State(状态)：The status of the agent with respect to the environment. State Space(状态空间): 所有状态的集合。S={si​}i=1n​。 Action(动作): 对于每一个状态，都有可选择的动作。 Action space o...</description>
       <category>academic</category>
       <pubDate>Wed, 07 Aug 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h3>1. 基本概念</h3>
+      <content:encoded><![CDATA[<h3>强化学习框架图</h3>
+<figure><img src="http://myimg.ekkosonya.cn/20240807111059.png" alt="主要框架" tabindex="0" loading="lazy"><figcaption>主要框架</figcaption></figure>
+<h3>1. 基本概念</h3>
 <p><strong>State(状态)</strong>：The status of the agent with respect to the environment.
 <strong>State Space(状态空间)</strong>: 所有状态的集合。<span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false">{</mo><msub><mi>s</mi><mi>i</mi></msub><msubsup><mo stretchy="false">}</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mrow><annotation encoding="application/x-tex">S=\{s_i\}_{i=1}^{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0087em;vertical-align:-0.2587em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-2.4413em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2587em;"><span></span></span></span></span></span></span></span></span></span>。</p>
 <p><strong>Action(动作)</strong>: 对于每一个状态，都有可选择的动作。
@@ -83,6 +85,7 @@ Deterministic — Stochastic</p>
 </ul>
 <p><strong>Markov process</strong>：在policy是确定的情况下，MDP就变为MP。</p>
 ]]></content:encoded>
+      <enclosure url="http://myimg.ekkosonya.cn/20240807111059.png" type="image/png"/>
     </item>
     <item>
       <title>Reinforcement Learning in Multiple-UAV Networks:Deployment and Movement Design</title>
@@ -345,7 +348,7 @@ x_t=
 </li>
 </ul>
 <p>具体代码：（策略为贪心策略）</p>
-<figure><img src="http://myimg.ekkosonya.cn/image-20240506013132171.png" alt="image-20240506013132171" tabindex="0" loading="lazy"><figcaption>image-20240506013132171</figcaption></figure>
+<figure><img src="http://myimg.ekkosonya.cn/image-20240506013132171.png" alt="算法1" tabindex="0" loading="lazy"><figcaption>算法1</figcaption></figure>
 <p>个人理解：</p>
 <ul>
 <li>通过K-means来划分各个无人机所管理的用户簇。无人机的位置初始化也是随机部署的</li>
