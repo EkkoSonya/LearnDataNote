@@ -238,7 +238,7 @@ $$
 
 具体代码：（策略为贪心策略）
 
-![image-20240506013132171](http://myimg.ekkosonya.cn/image-20240506013132171.png)
+![算法1](http://myimg.ekkosonya.cn/image-20240506013132171.png)
 
 个人理解：
 

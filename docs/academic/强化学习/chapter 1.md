@@ -8,6 +8,10 @@ tag:
 order: -0.5
 ---
 
+### 强化学习框架图
+
+![主要框架](http://myimg.ekkosonya.cn/20240807111059.png)
+
 ### 1. 基本概念
 
 **State(状态)**：The status of the agent with respect to the environment.
