@@ -71,7 +71,7 @@ $$
   该步骤是用来计算当前策略 $\pi_k$ 的 state value.  
   可以通过 Bellman equation 进行求解，即:
   $$
-  v_{\pi_k}=r_{\pi_k}+\gamma P_{\pi_k}b_{\pi_K}
+  v_{\pi_k}=r_{\pi_k}+\gamma P_{\pi_k}v_{\pi_k}
   $$
   根据对应的 Elementwise form:  
   $$
@@ -148,7 +148,7 @@ Policy iteration: 需要初始化策略$\pi_0$, 之后进行迭代
 Value iteration: 需要初始化猜测的 state value $v_0$
 
 - Policy update (PU):
-  考虑 greedy 策略求解, 选取当前状态下最大的 action value. 
+  考虑 greedy 策略求解, 选取当前状态下最大的 action value.  
   $$
   \pi_{k+1}=\argmax_{\pi}(r_\pi+\gamma P_\pi v_k)
   $$
