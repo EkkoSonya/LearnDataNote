@@ -41,7 +41,7 @@ $$
 **matrix-vector foem**:  
 $$
 \begin{aligned}
-  v=\max_{\pi}(r_\pi+\gamma P_\pi v) 
+  v=\max_{\pi}(r_\pi+\gamma P_\pi v)
 \end{aligned}
 $$
 
