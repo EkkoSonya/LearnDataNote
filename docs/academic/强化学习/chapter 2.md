@@ -133,9 +133,9 @@ $$
 $$
 其中,
 
-- $ v_\pi=[v_\pi(s_1),\dots,v_\pi(s_n)]^T\in R^n$
-- $ r_\pi=[r_\pi(s_1),\dots,r_\pi(s_n)]^T\in R^n$
-- $ P_\pi\in R^{n\times n}$, where $[P_\pi]_{ij}=p_\pi(s_j|s_i)$, 表示状态转移矩阵.
+- $v_\pi=[v_\pi(s_1),\dots,v_\pi(s_n)]^T\in R^n$
+- $r_\pi=[r_\pi(s_1),\dots,r_\pi(s_n)]^T\in R^n$
+- $P_\pi\in R^{n\times n}$, where $[P_\pi]_{ij}=p_\pi(s_j|s_i)$, 表示状态转移矩阵.
 
 ### 3. Why to slove state value
 
@@ -197,5 +197,6 @@ state value 和 action value 可以互相转化。
 
 - State value: $v_\pi(s)=E[G_t|S_t=s]$
 - Action value: $q_\pi(s,a)=E[G_t|S_t=s,A_t=a]$
+- State value 是 action value 的根据策略$\pi$加权平均，即$v_\pi(s)=\sum_a \pi(a|s)q(s,a)$
 - The Bellman equation (elementwise form and matrix-vector form)
 - 求解 the Bellman equation (2种方法)
