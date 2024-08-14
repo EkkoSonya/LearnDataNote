@@ -1,5 +1,5 @@
 ---
-title: RL4-值迭代和策略迭代(动态规划)
+title: RL4 - 值迭代和策略迭代(动态规划)
 date: 2024-08-09
 category:
   - academic
@@ -12,7 +12,7 @@ $$
 v=f(v)=\max_{\pi}(r_\pi+\gamma P_\pi v)
 $$
 
-### 1. Value iteration algorithm
+## 1. Value iteration algorithm
 
 根据 chapter 3 中涉及的 contraction mapping theorem, 我们可以通过对应的迭代算法来求解贝尔曼最优公式  
 $$
@@ -20,7 +20,7 @@ v_{k+1} = f(v_k) = \max_{\pi}(r_\pi + \gamma P_\pi v_k), \quad k=1,2,3\dots
 $$
 这种迭代算法称为 value iteration.
 
-#### 1.1 具体步骤
+### 1.1 具体步骤
 
 共分为 2 步：
 
@@ -47,11 +47,11 @@ $$
   **这里的$v_k$并不是 state value**  
   由于$\pi_{k+1}$是 greedy 的，对应的$v_{k+1}(s)=\max_a q_k(a,s)$
 
-#### 1.2 伪代码
+### 1.2 伪代码
 
 ![20240810190018](http://myimg.ekkosonya.cn/20240810190018.png)
 
-### 2. Policy iteration algorithm
+## 2. Policy iteration algorithm
 
 算法迭代示意图:
 $$
@@ -63,7 +63,7 @@ $$
 \xrightarrow{PI} \dots
 $$
 
-#### 2.1 算法描述
+### 2.1 算法描述
 
 首先随机设计一个初始的策略$\pi_0$
 
@@ -98,11 +98,11 @@ $$
   $$
   其中 $a_K^*(s) = \argmax_a q_{\pi_k}(s,a)$.  
 
-#### 2.2 伪代码
+### 2.2 伪代码
 
 ![20240811002219](http://myimg.ekkosonya.cn/20240811002219.png)
 
-#### 2.3 一些问题
+### 2.3 一些问题
 
 - 在 PE 步骤中，如何通过 Bellman equation 得到 state value $v_{\pi_k}$.
   根据 chapter 2 中求解 Bellman equation 的方法  
@@ -124,11 +124,11 @@ $$
   ![20240811000728](http://myimg.ekkosonya.cn/20240811000728.png)
 - policy iteration algorithm 与 value iteration algorithm 之间存在什么关系.
 
-### 3. Truncated policy iteration algorithm
+## 3. Truncated policy iteration algorithm
 
 该算法是 value iteration 以及 policy iteration 一般化的推广
 
-#### 3.1 value iteration 与 policy iteration 算法比较
+### 3.1 value iteration 与 policy iteration 算法比较
 
 Policy iteration: 需要初始化策略$\pi_0$, 之后进行迭代  
 
@@ -189,7 +189,7 @@ $$
 | 5) Policy: | $\pi_2=\argmax_\pi(r_\pi+\gamma P_\pi v_{\pi_1})$ | $\pi_2'=\argmax_\pi(r_\pi+\gamma P_\pi v_1)$ |   |
 | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
 
-#### 3.2 Truncated policy iteration algorithm
+### 3.2 Truncated policy iteration algorithm
 
 ![20240811010933](http://myimg.ekkosonya.cn/20240811010933.png)  
 
@@ -197,6 +197,6 @@ $$
 因此 Truncated policy iteration algorithm 就是进行迭代 $n$ 步来求解。  
 ![20240811011149](http://myimg.ekkosonya.cn/20240811011149.png)
 
-##### truncated policy iteration algorithm 是否是收敛的
+#### truncated policy iteration algorithm 是否是收敛的
 
 ![20240811011334](http://myimg.ekkosonya.cn/20240811011334.png)

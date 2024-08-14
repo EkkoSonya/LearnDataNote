@@ -1,5 +1,5 @@
 ---
-title: RL5-蒙特卡洛方法 (Monte Carlo) model-free
+title: RL5 - 蒙特卡洛方法 (Monte Carlo) model-free
 date: 2024-08-11
 category:
   - academic
@@ -29,13 +29,13 @@ order: -0.5
     q_\pi(s,a)=E[G_t|S_t=s,A_t=a]
   $$
 
-### 1. MC Basic
+## 1. MC Basic
 
 最简单的示例算法，用于解释 MC 的原理，但现实场景中不太经常使用，效率过低。  
 
 **核心思想**：如何将 Policy iteration algorithm 转换为 model-free 的情况。
 
-#### 1.1 算法思路
+### 1.1 算法思路
 
 Policy iteration 算法的核心是 先根据当前策略计算出各个状态的 state value， 再将 state value 转换为 action value，更新策略的步骤就是选择此时 action value 最大的 action.  
 $$
@@ -58,7 +58,7 @@ q_{\pi_k}(s,a)=E[G_t|S_t=s,A_t=a]
 $$  
 从此可以发现，我们可以通过前面所引入的 mean estimation 方法，来进行求解 $q(s,a)$.  
 
-#### 1.2 如何估计 $q(s,a)$
+### 1.2 如何估计 $q(s,a)$
 
 - 从指定的 $(s,a)$ 出发，根据策略 $\pi_k$, 我们可以生成一个 episode.
 - 这个 episode 的 return 为 $g(s,a)$.
@@ -69,7 +69,7 @@ $$
   q_{\pi_k}(s,a)=E[G_t|S_t=s,A_t=a]\approx \frac{1}{N}\sum_{i=1}^N g^{(i)}(s,a).
   $$
 
-#### 1.3 具体算法
+### 1.3 具体算法
 
 与 Policy iteration algorithm 步骤类似  
 首先初始化一个随机的策略$\pi_0$，然后进行迭代，对于 $k\th$ 迭代，有：  
@@ -86,11 +86,11 @@ $$
 
 ![20240811233346](http://myimg.ekkosonya.cn/20240811233346.png)
 
-### 2. MC Exploring Starts
+## 2. MC Exploring Starts
 
 MC Exploring Starts 是针对 MC Basic 的一些改进，即对于数据(experience)更加高效利用。  
 
-#### 2.1 Episode 的高效利用
+### 2.1 Episode 的高效利用
 
 **Visit**: every time a state-action pair appears in the episode, it is called a visit of that state-action pair.  
 
@@ -129,7 +129,7 @@ $$
 - every-visit method
   对于每个 state-action pair, 都记录 action value 估计中.
 
-#### 2.2 高效地更新 Policy
+### 2.2 高效地更新 Policy
 
 **什么时候更新策略**也是一个影响效率的因素。  
 
@@ -140,11 +140,11 @@ $$
   这类算法统称为：**Generalized policy iteration (GPI)**.  
   它会在 Policy-evaluation 和 policy-improvement 中不断切换，即不需要完全精确地求出 action value，就直接去更新策略。
 
-#### 2.3 MC Exploring Starts
+### 2.3 MC Exploring Starts
 
 ![20240812004534](http://myimg.ekkosonya.cn/20240812004534.png)
 
-#### 2.4 Exploring Statrts的解释
+### 2.4 Exploring Statrts的解释
 
 - **Exploring**
   表示对于每一个 action-state pair $(s,a)$, 都需要有多个 episodes, 这样才能去估计相应的$q_{\pi}(s,a)$.  
@@ -155,16 +155,16 @@ $$
 
 据目前而言，Exploring Starts 是一个必要条件.
 
-### 3. MC Eplison-Greedy
+## 3. MC Eplison-Greedy
 
 将 Exploring Starts 条件转换掉，通过采取 Soft Policies 的方法。  
 
-#### 3.1 Soft Policy
+### 3.1 Soft Policy
 
 A policy is called soft if the probability to **take any action is positive**.  
 显然 soft policy 是 stochastic 的，并且如果按照这样一个策略，在 episode 足够长的情况下，我们可以确保其可以遍历所有的 state-action pair.  
 
-#### 3.2 $\epsilon$-greedy policy
+### 3.2 $\epsilon$-greedy policy
 
 在这里，我们采用的是 $\epsilon$-greedy policies, 其属于 soft policies.  
 $$
@@ -182,12 +182,12 @@ $\epsilon$-greedy policy 可以平衡 exploitation 和 exploration.
 显然$\epsilon=0$, policy 就是 greedy 的;  
 如果$\epsilon=1$, 此时就是随机策略，其探索性就很强.  
 
-#### 3.3 $\epsilon$-greedy policy 引入 MC-based 算法中
+### 3.3 $\epsilon$-greedy policy 引入 MC-based 算法中
 
 对于 MC Basic 以及 MC Exploring 中的 policy improvement 中，找的是在所有可能策略中的最优策略，因此是一个确定的贪心策略。  
 
 ![20240812011140](http://myimg.ekkosonya.cn/20240812011140.png)
 
-#### 3.3 算法流程
+### 3.3 算法流程
 
 ![20240812010538](http://myimg.ekkosonya.cn/20240812010538.png)

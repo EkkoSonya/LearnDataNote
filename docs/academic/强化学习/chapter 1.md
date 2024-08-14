@@ -1,5 +1,5 @@
 ---
-title: RL1-基本概念
+title: RL1 - 基本概念
 date: 2024-08-06
 category:
   - academic
@@ -8,11 +8,11 @@ tag:
 order: -0.5
 ---
 
-### 强化学习框架图
+## 强化学习框架图
 
 ![主要框架](http://myimg.ekkosonya.cn/20240807111059.png)
 
-### 1. 基本概念
+## 1. 基本概念
 
 - **State(状态)**：The status of the agent with respect to the environment.
 
@@ -50,7 +50,7 @@ $s_1\overset{a_2}{\underset{r=0}{\rightarrow}}s_2\overset{a_2}{\underset{r=0}{\r
 可以通过设置将episodic tasks转换成continuing tasks，如可以在target states中限制action space，控制其一直待在target states中。
 Deterministic — Stochastic
 
-### 2.Markov decision process(MDP)
+## 2.Markov decision process(MDP)
 
 关键元素：
 

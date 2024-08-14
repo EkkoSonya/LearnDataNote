@@ -1,5 +1,5 @@
 ---
-title: RL2-贝尔曼公式
+title: RL2 - 贝尔曼公式
 date: 2024-08-07
 category:
   - academic
@@ -8,14 +8,14 @@ tag:
 order: -0.5
 ---
 
-### 核心内容
+## 核心内容
 
 - state value
 - the Bellman equation
 
-### 1.State value
+## 1.State value
 
-#### 1.1 $G_t$
+### 1.1 $G_t$
 
 引入随机变量后对应的discounted return的描述。  
 即一个trajectory下的discounted return。
@@ -29,7 +29,7 @@ $$
 - $\gamma$ 为discounted rate
 - $G_t$也是一个随机变量
 
-#### 1.2 State value
+### 1.2 State value
 
 **State value** 是 $G_t$ 的期望, 也称为 state value function  
 表示为 The expection(expected value or mean) of $G_t$:  
@@ -41,13 +41,13 @@ $$
 - $v_\pi(s)$ 是基于一个给定策略 $\pi$ , 对于不同的策略，所得到的 state value 是不同的.
 - state value 可以用来衡量一个状态的价值.
 
-#### 1.3 State value 与 return 的区别
+### 1.3 State value 与 return 的区别
 
 Return 是针对一条trajectory所求的，而 State value 则是对多个 trajectory 求 return 再求平均值。  
 The state value is the mean of all possible returns that can be obtained starting from a state.  
 只有当所有东西都是确定性的($\pi(a|s),p(r|s,a),p(s'|s,a)$)，state value 与 return 是一致的.
 
-### 2. Bellman equation
+## 2. Bellman equation
 
 用来描述所有状态的state value的关系.  
 根据一个 random trajectory:  
@@ -72,7 +72,7 @@ v_\pi(s) & =E[G_t|S_t=s] \\
 $$
 需要推导$E[R_{t+1}|S_t=s]$和$E[G_{t+1}|S_t=s]$的计算即可。
 
-#### 2.1 The mean of immediate rewards: $E[R_{t+1}|S_t=s]$
+### 2.1 The mean of immediate rewards: $E[R_{t+1}|S_t=s]$
 
 $$
 \begin{aligned}
@@ -81,7 +81,7 @@ $$
 \end{aligned}
 $$
 
-#### 2.2 The mean of future rewards: $E[G_{t+1}|S_t=s]$
+### 2.2 The mean of future rewards: $E[G_{t+1}|S_t=s]$
 
 $$
 \begin{aligned}
@@ -101,7 +101,7 @@ $$
 \end{aligned}
 $$
 
-#### 2.3 Bellman equation
+### 2.3 Bellman equation
 
 $$
 \begin{aligned}
@@ -116,7 +116,7 @@ $$
 - $\pi(a|s)$ 表示一个给定的策略. 求解Bellman equation 称为策略评估(Policy evaluation).
 - $p(r|s,a),p(s'|s,a)$ 是由环境决定的(dynamic model|environment model). 后续可能是未知的(model-free)，需要通过采样解决.
 
-#### 2.4 Bellman equation (Matrix-vector form)
+### 2.4 Bellman equation (Matrix-vector form)
 
 ![20240808004020](http://myimg.ekkosonya.cn/20240808004020.png)
 此时,对于所有状态$s$，对应的 Bellman equation 为
@@ -137,7 +137,7 @@ $$
 - $r_\pi=[r_\pi(s_1),\dots,r_\pi(s_n)]^T\in R^n$
 - $P_\pi\in R^{n\times n}$, where $[P_\pi]_{ij}=p_\pi(s_j|s_i)$, 表示状态转移矩阵.
 
-### 3. Why to slove state value
+## 3. Why to slove state value
 
 - 为了进行 **Policy evaluation**, 即对于给定策略，求出其对应状态的 state value 的过程。
 
@@ -160,7 +160,7 @@ $$
 $$
 可以最开始均初始化为 0 , 然后进行不断迭代，可以得到一个序列${v_0,v_1,v_2,\dots}$. 最终可以证明：$v_k \rightarrow v_\pi=(I-\gamma p_\pi)^{-1}r_\pi,\space k\rightarrow\infty$
 
-### 4. Action value
+## 4. Action value
 
 - State value: agent从一个状态出发可以得到的平均return.  
   the average return the agent can get starting **from a state**
@@ -193,7 +193,7 @@ $$
 
 state value 和 action value 可以互相转化。
 
-### 5. 总结
+## 5. 总结
 
 - State value: $v_\pi(s)=E[G_t|S_t=s]$
 - Action value: $q_\pi(s,a)=E[G_t|S_t=s,A_t=a]$
