@@ -1,6 +1,6 @@
 ---
 title: RL6 - 随机近似理论与随机梯度下降算法
-date: 2024-08-11
+date: 2024-08-13
 category:
   - academic
 tag:
@@ -11,9 +11,9 @@ order: -0.5
 
 - Stochastic approximation(SA): SA refers to a broad class of **stochastic iterative** algorithms **soloving root finding** or **optimization problems**.
 
-### 1. 引言
+## 1. 引言
 
-#### 1.1 求均值的方法
+### 1.1 求均值的方法
 
 - 第一种：直接通过 $E[x]\approx \bar{x} := \frac{1}{N}\sum_{i=1}^N x_i$，进行估计，只有当**样本全部收集完**才能估计.  
 
@@ -40,9 +40,9 @@ order: -0.5
   $$
   因此，$\color{blue}{w_{k+1}=w_k-\frac{1}{k}(w_k-x_k)}$
 
-### 2. Robbins-Monto(RM) algorithm
+## 2. Robbins-Monto(RM) algorithm
 
-#### 2.1 问题引入
+### 2.1 问题引入
 
 假设我们需要求解如下方程:  
 $$
@@ -52,7 +52,7 @@ $$
 显然，如果对于 $g(w)$ 已知的情况，我们可以通过一些特定的算法进行求解。  
 如果 $g(w)$ 未知，就需要新的算法进行解决。
 
-#### 2.2 算法介绍
+### 2.2 算法介绍
 
 RM 算法就可以用来求解当 $g(w)$ 未知时的情况，即函数 $g(w)$ 是一个黑盒，我们只能通过 输入序列: ${w_k}$, 得到含有噪音的观测值序列: $\widecheck{g}(w_k,\eta_k)$  
 具体解决如下:  
@@ -65,7 +65,7 @@ $$
 - $\widetilde{g}(w_k,\eta_k)=g(w_k)+\eta_k$ 是第 k 次的观测值(含噪音).
 - $a_k$ 是一个 positive coefficient.
 
-#### 2.3 收敛性分析
+### 2.3 收敛性分析
 
 **Robbins-Monro Theorem**  
 In the Robbins-Monro algorithm, if
@@ -84,7 +84,7 @@ In the Robbins-Monro algorithm, if
 
 $a_k = \frac{1}{k}$是满足上面三个条件的.  但实际上我们往往是选择一个非常小的常数。
 
-#### 2.4 应用于 mean estimation 中
+### 2.4 应用于 mean estimation 中
 
 比如我们要估计某个随机变量X的 $E[X]$  
 我们可以设计如下方程:  
@@ -118,9 +118,9 @@ $$
 w_{k+1}=w_k-\alpha_k \widetilde{g}(w_k,\eta_k)=w_k-\alpha_k(w_k-x_k)
 $$
 
-### 3. Stochastic gradient descent
+## 3. Stochastic gradient descent
 
-#### 3.1 问题引入
+### 3.1 问题引入
 
 需要求解一个优化问题:  
 $$
@@ -164,15 +164,15 @@ $$
   $$
   但能否保证其精确度，以及是否可以到最后优化的成果。
 
-#### 3.2 SGD 分析
+### 3.2 SGD 分析
 
-##### mean estimation 问题转化
+#### mean estimation 问题转化
 
 我们可以将 均值估计 问题 转化为 一个 优化问题 进行求解：  
 ![20240814013856](http://myimg.ekkosonya.cn/20240814013856.png)
-![20240814014058](http://myimg.ekkosonya.cn/20240814014058.png)
+* ![20240814014058](http://myimg.ekkosonya.cn/20240814014058.png)
 
-##### SGD 正确性和收敛性分析
+#### SGD 正确性和收敛性分析
 
 从 GD 到 SGD:  
 $$
