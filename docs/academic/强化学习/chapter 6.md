@@ -227,3 +227,15 @@ $$
 
 **对应收敛性证明**  
 ![20240814013746](http://myimg.ekkosonya.cn/20240814013746.png)
+
+### 3.3 SGD 另一种问题描述方法 (deterministic formulation)
+
+在之前关于使用 SGD 算法的问题描述中，我们是引入了 随机变量 和 期望的情况.  
+![20240814230431](http://myimg.ekkosonya.cn/20240814230431.png)
+我们可以将这个问题可以转化为一个随机变量的方法，从而引入 SGD 算法.  
+![20240814230606](http://myimg.ekkosonya.cn/20240814230606.png)
+![20240814230650](http://myimg.ekkosonya.cn/20240814230650.png)
+
+### 3.4 BGD MBGD SGDw
+
+![20240814230747](http://myimg.ekkosonya.cn/20240814230747.png)
