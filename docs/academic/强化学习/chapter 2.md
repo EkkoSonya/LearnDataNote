@@ -18,7 +18,7 @@ order: -0.5
 ### 1.1 $G_t$
 
 引入随机变量后对应的discounted return的描述。  
-即一个trajectory下的discounted return。
+即一个trajectory下的discounted return。  
 ![单步示例](http://myimg.ekkosonya.cn/20240807112633.png)
 由此可以推导出一个多步的trajectory:  
 $$
