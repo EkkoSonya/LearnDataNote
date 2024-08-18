@@ -105,7 +105,7 @@ $$
 \begin{aligned}
   q_{t+1}(s_t,a_t)
   &
-  =q_t(s_a,a_t)-\alpha_t(s_a,a_t) [q_t(s_a,a_t)-[r_{t+1}+\gamma q_t(s_{t+1},a_{t+1})]]
+  =q_t(s_a,a_t)-\alpha_t(s_t,a_t) [q_t(s_a,a_t)-[r_{t+1}+\gamma q_t(s_{t+1},a_{t+1})]]
   \\
   q_{t+1}(s,a)
   &
@@ -139,4 +139,59 @@ $$
 
 ## 4. TD Learning of optimal action value
 
+Q-learning 算法是用来解决 action value 形式下的贝尔曼最优公式 (Bellman optimality equation in terms of action value)  
+$$
+q(s,a)=\mathbb{E}[R_{t+1}+\gamma \max_{a}q(S_{t+1},a)|S_t=s,A_t=a], \quad \forall s,a
+$$
+
 ### 4.1 Q-learning
+
+Q-learning 直接估计的是 optimal action value，因此不需要进行 policy improvement。  
+
+$$
+\begin{aligned}
+  q_{t+1}(s_t,a_t)
+  &
+  =q_t(s_t,a_t)-\alpha_t(s_t,a_t) [q_t(s_t,a_t)-[r_{t+1}+\gamma \max_{a\in A}q_t(s_{t+1},a)]]
+  \\
+  q_{t+1}(s,a)
+  &
+  =q_t(s,a), \quad \forall(s,a) \neq (s_t,a_t)
+\end{aligned}
+$$
+
+### 4.2. off-policy | on-policy
+
+- behavior policy: 是用来与环境进行交互，从而生成经验数据的策略
+- target policy: 是我们不断进行更新的策略，最终优化的策略  
+  
+#### on - policy
+
+该算法中 behavior policy 和 target policy 是一致的，即我通过这个策略与环境进行交互生成一系列经验，在通过经验来更新这个策略。
+
+#### off - policy
+
+该算法中 behavior policy 和 target policy 是不同的，即我通过**一个策略**与环境进行交互生成一系列经验。再通过这些经验来不断改进更新另一个策略，这另一个策略会更新到最优的策略。
+
+Sarsa，MC 是 on-policy 的  
+Q-learning 是 off-policy 的  
+
+### 4.3 Q-learning 伪代码
+
+因为 Q-learning 是 off-policy 的，因此，如果我们强制让 target policy 与 behavior ppolicy 一致也是可以的，此时也可以是 on-policy 的。  
+
+#### off-poicy 版本
+
+![20240818182057](http://myimg.ekkosonya.cn/20240818182057.png)
+
+此时 target policy 就不需要是 $\epsilon-greedy$ 策略了，因为不需要 target policy 进行生成数据。
+
+#### on-policy 版本
+
+![20240818181917](http://myimg.ekkosonya.cn/20240818181917.png)
+
+## 5. TD 算法的统一形式和总结
+
+![20240818182301](http://myimg.ekkosonya.cn/20240818182301.png)
+
+![20240818182231](http://myimg.ekkosonya.cn/20240818182231.png)
