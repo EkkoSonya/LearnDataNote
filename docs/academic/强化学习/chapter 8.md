@@ -177,8 +177,11 @@ $$
 - $w$ 和 $w_T$ 表示 the main and target networks 的参数，在初始化的时候是设为相同的。
 - 在每一次迭代时，我们需要从经验池 (the replay buffer) 中取出一定数量的样本 (a mini-batch of samples {(s,a,r,s')}) 进行训练。
 - 网络的输入包括 状态 s 和 动作 a. 在训练求解梯度时，我们先直接求解 target network 的输出，视为 $y_T \doteq r+\gamma \max_{a\in\mathcal{A}(s')}\textcolor{red}{\hat{q}(s',a,w_T)}$。  
-  然后我们通过 mini-batch 样本 $\{(s,a,y_T)\}$, 通过梯度的算法来最小化对应的损失函数为 $\textcolor{red}{y_T-\hat{q}(s,a,w)}$。  
-  即可以通过梯度下降：  
+  然后我们通过 mini-batch 样本 $\{(s,a,y_T)\}$, 通过梯度的算法来最小化对应的损失函数, 假设有 N 个样本，那么对应的损失函数求解为：  
+  $$
+  J(w) = \sum_{i=1}^{N}\textcolor{red}{y_T-\hat{q}(s,a,w)}
+  $$
+  即可以通过梯度下降，来更新参数值  
   $$
   w_{t+1} = w_t + \alpha_t \frac{1}{N}\sum_{i=1}^{N} (y_T-\hat{q}(s_i,a_i,w_t)) \cdot \triangledown_w \hat{q}(s_i,a_i,w_t)
   $$
