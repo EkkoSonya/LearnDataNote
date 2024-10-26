@@ -1,6 +1,6 @@
 ---
-title: Java - 数组 | 字符串 | 正则表达式
-date: 2024-10-25
+title: Java - 内部类
+date: 2024-10-26
 category:
   - code
 tag:
@@ -484,6 +484,4 @@ public static void main(String[] args) {
 }
 ```
 
-反正只要是符合接口中方法的定义的，都可以直接进行方法引用
-
-### 异常机制
+反正只要是符合接口中方法的定义的，都可以直接进行方法引用。
