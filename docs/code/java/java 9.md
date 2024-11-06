@@ -7,7 +7,7 @@ tag:
   - java
 # star: true
 # sticky: true
-order: -0.91
+order: -0.92
 ---
 
 ## 泛型

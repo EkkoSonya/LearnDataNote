@@ -7,7 +7,7 @@ tag:
   - java
 # star: true
 # sticky: true
-order: -0.5
+order: -1
 ---
 
 ## 类与对象

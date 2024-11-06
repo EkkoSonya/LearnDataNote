@@ -7,7 +7,7 @@ tag:
   - java
 # star: true
 # sticky: true
-order: -0.53
+order: -0.97
 ---
 
 ## 面向对象高级篇1
