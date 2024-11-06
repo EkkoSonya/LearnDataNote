@@ -7,7 +7,7 @@ tag:
   - java
 # star: true
 # sticky: true
-order: -0.5
+order: -0.51
 ---
 
 ## 静态变量和静态方法

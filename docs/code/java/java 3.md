@@ -7,7 +7,7 @@ tag:
   - java
 # star: true
 # sticky: true
-order: -0.5
+order: -0.52
 ---
 
 ## 封装 继承和多态
