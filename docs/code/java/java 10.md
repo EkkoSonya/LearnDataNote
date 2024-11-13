@@ -169,3 +169,45 @@ public static void main(String[] args) {
 通过给设定泛型上限，我们就可以更加灵活地控制泛型的具体类型范围。
 
 ### 类型擦除
+
+前面我们已经了解如何使用泛型，那么泛型到底是如何实现的呢，程序编译之后的样子是什么样的？
+
+```java
+public abstract class A <T>{
+    abstract T test(T t);
+}
+```
+
+实际上在Java中并不是真的有泛型类型（为了兼容之前的Java版本）因为所有的对象都是属于一个普通的类型，一个泛型类型编译之后，实际上会直接使用默认的类型：
+
+```java
+public abstract class A {
+    abstract Object test(Object t);  //默认就是Object
+}
+```
+
+当然，如果我们给类型变量设定了上界，那么会从默认类型变成上界定义的类型：
+
+```java
+public abstract class A <T extends Number>{   //设定上界为Number
+    abstract T test(T t);
+}
+```
+
+那么编译之后：
+
+```java
+public abstract class A {
+    abstract Number test(Number t);  //上界Number，因为现在只可能出现Number的子类
+}
+```
+
+因此，泛型其实仅仅是在编译阶段进行类型检查，当程序在运行时，并不会真的去检查对应类型，所以说哪怕是我们不去指定类型也可以直接使用：
+
+```java
+public static void main(String[] args) {
+    Test test = new Test();    //对于泛型类Test，不指定具体类型也是可以的，默认就是原始类型
+}
+```
+
+只不过此时编译器会给出警告
