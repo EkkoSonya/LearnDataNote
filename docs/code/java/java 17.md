@@ -18,6 +18,8 @@ order: -0.85
 
 `remove` 也是根据 `equals` 进行判断来删除元素
 
+![20241130012855](http://myimg.ekkosonya.cn/20241130012855.png)
+
 - 对于 `List` 列表
     判断两个元素是否相同，是根据 元素中的 `equals` 方法判断的
 
