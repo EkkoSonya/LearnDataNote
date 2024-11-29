@@ -6,8 +6,8 @@
     <link>http://ekkosonya.cn/</link>
     <description>笔记记录</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 29 Nov 2024 17:30:24 GMT</pubDate>
-    <lastBuildDate>Fri, 29 Nov 2024 17:30:24 GMT</lastBuildDate>
+    <pubDate>Fri, 29 Nov 2024 17:32:22 GMT</pubDate>
+    <lastBuildDate>Fri, 29 Nov 2024 17:32:22 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>code</category>
@@ -225,10 +225,11 @@
       <link>http://ekkosonya.cn/code/java/java%2017.html</link>
       <guid>http://ekkosonya.cn/code/java/java%2017.html</guid>
       <source url="http://ekkosonya.cn/rss.xml">Java - 集合类对象相等判定</source>
-      <description>集合类对象相等判定 equals 方法 和 == 的区别 集合类中并不是通过 == 进行判断的，都是根据 equals 方法进行判断的 remove 也是根据 equals 进行判断来删除元素 2024113001285520241130012855 对于 List 列表 判断两个元素是否相同，是根据 元素中的 equals 方法判断的 对于 Map ...</description>
+      <description>集合类对象相等判定 Oject类中的 equals 方法比较的是地址，所以自己定义的类要自己重写 equals 等方法，否则给你当成 Object 类 equals 方法 和 == 的区别 集合类中并不是通过 == 进行判断的，都是根据 equals 方法进行判断的 remove 也是根据 equals 进行判断来删除元素 20241130012855...</description>
       <category>code</category>
       <pubDate>Sat, 30 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>集合类对象相等判定</h2>
+<p><code>Oject</code>类中的 <code>equals</code> 方法比较的是<strong>地址</strong>，所以自己定义的类要自己重写 <code>equals</code> 等方法，否则给你当成 <code>Object</code> 类</p>
 <p><code>equals</code> 方法 和 <code>==</code> 的区别</p>
 <p>集合类中并不是通过 <code>==</code> 进行判断的，都是根据 <code>equals</code> 方法进行判断的</p>
 <p><code>remove</code> 也是根据 <code>equals</code> 进行判断来删除元素</p>
